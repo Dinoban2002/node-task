@@ -1,0 +1,1 @@
+{"main":"subapp.js","scripts":{"start":"nodemon subapp.js"},"dependencies":{"fastify":"^4.2.0","generate-api-key":"^1.0.0","mysql":"^2.18.1","mysql2":"^2.3.3","nodemon":"^2.0.18","sequelize":"^6.21.2","uuid":"^8.3.2"}}
