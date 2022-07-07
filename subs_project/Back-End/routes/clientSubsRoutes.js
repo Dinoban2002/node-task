@@ -76,5 +76,25 @@ const routes = async (app, options) =>{
             } 
         }
     });
+    app.post('/view-subs', async (req, res) => {
+        let data = req.body
+        try {
+            let result = await Subscription.findAll({where:{_kf__clientid__lsxn:data.clientId}}).catch(e =>{res.send(`${e}`)});
+            res.send(result);
+            
+        } catch (err) {
+            res.send(err);  
+        }
+    });
+    app.post('/client-license', async (req, res) => {
+        let data = req.body
+        try {
+            let result = await License.findAll({attributes: ['name', 'version','type']},{where:{__kp__licenseid__lsan:data.licenseId}}).catch(e =>{res.send(`${e}`)});
+            res.send(result);
+        } catch (err) {
+            res.send(err);  
+        }
+    });
+    
 }
 module.exports=routes;
