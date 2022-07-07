@@ -1,0 +1,19 @@
+{
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "dependencies": {
+    "@fastify/cors": "^7.0.0",
+    "body-parser": "^1.20.0",
+    "fastify": "^3.20.1",
+    "fastify-cors": "^6.1.0",
+    "generate-api-key": "^1.0.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3",
+    "node-module": "^2.0.0",
+    "nodemon": "^2.0.19",
+    "sequelize": "^6.21.2",
+    "uuid": "^8.3.2"
+  }
+}

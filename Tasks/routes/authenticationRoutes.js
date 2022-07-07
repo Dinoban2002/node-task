@@ -48,7 +48,7 @@ const routes = async (app, options) => {
                     let result =  await Authentication.findAll({where:{api_key: apiKey }}).catch(e =>{reply.send(`${e}`)});
                     if(result.length==0){
                         let result = await Authentication.create({username:username,password:password,api_key:apiKey}).catch(e =>{reply.send(e)});
-                        reply.send({msg:"account created successfully",result})
+                        reply.send({msg:"account created successfully"})
                         break;
                     }
                 }
