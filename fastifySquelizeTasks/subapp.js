@@ -7,6 +7,5 @@ app.register(require("./routes/crudOperationsRoutes"));
 app.listen(3009, function (err, address) {
     if (err) {
         console.error(err)
-        process.exit(1)
     }
 })
